@@ -308,6 +308,32 @@ typedef i1 size_t;
 #define I8_MAX                   9223372036854775807LL
 #define I8_MIN                   (-I8_MAX - 1LL)
 
+/* made up useful defines */
+#define U1_55    0x55
+#define U12_55   0x56
+#define U1_AA    0xAA
+#define U2_55    0x5555
+#define U22_55   0x5556
+#define U2_AA    0xAAAA
+#define I21_AA   0xFFAA
+#define I212_55  0xFF56
+#define U4_55    0x55555555
+#define U42_55   0x55555556
+#define U4_AA    0xAAAAAAAA
+#define I41_AA   0xFFFFFFAA
+#define I42_AA   0xFFFFAAAA
+#define I412_55  0xFFFFFF56
+#define I422_55  0xFFFF5556
+#define U8_55    0x5555555555555555
+#define U82_55   0x5555555555555556
+#define U8_AA    0xAAAAAAAAAAAAAAAA
+#define I81_AA   0xFFFFFFFFFFFFFFAA
+#define I82_AA   0xFFFFFFFFFFFFAAAA
+#define I84_AA   0xFFFFFFFFAAAAAAAA
+#define I812_55  0xFFFFFFFFFFFFFF56
+#define I822_55  0xFFFFFFFFFFFF5556
+
+
 /* Simulate float.h assumes IEEE standard format and 4 8 10 byte formats (FLT_, DBL_, LDBL_) (FLT_ maps to F4, DBL_ maps to F8) */
 
 #define DBL_DIG                  15
@@ -347,6 +373,9 @@ typedef i1 size_t;
 #define FLT_ROUNDS               1
 
 #define PI_SHORT 3.14
+#define M_PI     3.14159265358979323846
+#define M_PIl    3.141592653589793238462643383279502884L
+
 
 #ifdef HAS_LIBC
 #include <stdio.h>

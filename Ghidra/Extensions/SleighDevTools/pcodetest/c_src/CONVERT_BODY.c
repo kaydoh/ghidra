@@ -15,10 +15,12 @@
  */
 #include "pcode_test.h"
 
-
+// Not sure if O0 will optimize out the locals, O3 probably will
 #define PCODE_CONVERT(typ, typ0)			\
   typ0 pcode_##typ##_to_##typ0##_convert(typ a) {	\
-    return (typ0)a;					\
+    typ x = a;						\
+    typ0 y = (typ0)x;					\
+    return y;						\
   }
 
 PCODE_CONVERT(i1, i1);
