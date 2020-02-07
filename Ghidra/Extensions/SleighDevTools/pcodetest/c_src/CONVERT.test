@@ -1,7 +1,8 @@
 #include "pcode_test.h"
 
 TEST pcode_i1_to_i1_convert_Main()
-{	extern i1 pcode_i1_to_i1_convert(i1 a);
+{
+	extern i1 pcode_i1_to_i1_convert(i1 a);
 	ASSERTI1(pcode_i1_to_i1_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_i1_to_i1_convert(0), 0);
 	ASSERTI1(pcode_i1_to_i1_convert(-1), -1);
@@ -12,7 +13,8 @@ TEST pcode_i1_to_i1_convert_Main()
 }
 
 TEST pcode_i2_to_i1_convert_Main()
-{	extern i1 pcode_i2_to_i1_convert(i2 a);
+{
+	extern i1 pcode_i2_to_i1_convert(i2 a);
 	ASSERTI1(pcode_i2_to_i1_convert(U2_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_i2_to_i1_convert(0), 0);
 	ASSERTI1(pcode_i2_to_i1_convert(-1), -1);
@@ -27,7 +29,8 @@ TEST pcode_i2_to_i1_convert_Main()
 }
 
 TEST pcode_i4_to_i1_convert_Main()
-{	extern i1 pcode_i4_to_i1_convert(i4 a);
+{
+	extern i1 pcode_i4_to_i1_convert(i4 a);
 	ASSERTI1(pcode_i4_to_i1_convert(U4_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_i4_to_i1_convert(0), 0);
 	ASSERTI1(pcode_i4_to_i1_convert(-1), -1);
@@ -48,7 +51,8 @@ TEST pcode_i4_to_i1_convert_Main()
 }
 
 TEST pcode_u1_to_i1_convert_Main()
-{	extern i1 pcode_u1_to_i1_convert(u1 a);
+{
+	extern i1 pcode_u1_to_i1_convert(u1 a);
 	ASSERTI1(pcode_u1_to_i1_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_u1_to_i1_convert(0), 0);
 	ASSERTI1(pcode_u1_to_i1_convert(U1_MAX), -1);
@@ -59,7 +63,8 @@ TEST pcode_u1_to_i1_convert_Main()
 }
 
 TEST pcode_u2_to_i1_convert_Main()
-{	extern i1 pcode_u2_to_i1_convert(u2 a);
+{
+	extern i1 pcode_u2_to_i1_convert(u2 a);
 	ASSERTI1(pcode_u2_to_i1_convert(U2_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_u2_to_i1_convert(0), 0);
 	ASSERTI1(pcode_u2_to_i1_convert(U1_55), U1_55);
@@ -72,7 +77,8 @@ TEST pcode_u2_to_i1_convert_Main()
 }
 
 TEST pcode_u4_to_i1_convert_Main()
-{	extern i1 pcode_u4_to_i1_convert(u4 a);
+{
+	extern i1 pcode_u4_to_i1_convert(u4 a);
 	ASSERTI1(pcode_u4_to_i1_convert(U4_MAGIC), U1_MAGIC);
 	ASSERTI1(pcode_u4_to_i1_convert(0), 0);
 	ASSERTI1(pcode_u4_to_i1_convert(U1_55), U1_55);
@@ -90,7 +96,8 @@ TEST pcode_u4_to_i1_convert_Main()
 }
 
 TEST pcode_i1_to_i2_convert_Main()
-{	extern i2 pcode_i1_to_i2_convert(i1 a);
+{
+	extern i2 pcode_i1_to_i2_convert(i1 a);
 	ASSERTI2(pcode_i1_to_i2_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI2(pcode_i1_to_i2_convert(0), 0);
 	ASSERTI2(pcode_i1_to_i2_convert(-1), -1);
@@ -101,7 +108,8 @@ TEST pcode_i1_to_i2_convert_Main()
 }
 
 TEST pcode_i2_to_i2_convert_Main()
-{	extern i2 pcode_i2_to_i2_convert(i2 a);
+{
+	extern i2 pcode_i2_to_i2_convert(i2 a);
 	ASSERTI2(pcode_i2_to_i2_convert(U2_MAGIC), U2_MAGIC);
 	ASSERTI2(pcode_i2_to_i2_convert(0), 0);
 	ASSERTI2(pcode_i2_to_i2_convert(-1), -1);
@@ -116,7 +124,8 @@ TEST pcode_i2_to_i2_convert_Main()
 }
 
 TEST pcode_i4_to_i2_convert_Main()
-{	extern i2 pcode_i4_to_i2_convert(i4 a);
+{
+	extern i2 pcode_i4_to_i2_convert(i4 a);
 	ASSERTI2(pcode_i4_to_i2_convert(U4_MAGIC), U2_MAGIC);
 	ASSERTI2(pcode_i4_to_i2_convert(0), 0);
 	ASSERTI2(pcode_i4_to_i2_convert(-1), -1);
@@ -138,7 +147,8 @@ TEST pcode_i4_to_i2_convert_Main()
 }
 
 TEST pcode_u1_to_i2_convert_Main()
-{	extern i2 pcode_u1_to_i2_convert(u1 a);
+{
+	extern i2 pcode_u1_to_i2_convert(u1 a);
 	ASSERTI2(pcode_u1_to_i2_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI2(pcode_u1_to_i2_convert(0), 0);
 	ASSERTI2(pcode_u1_to_i2_convert(U1_MAX), U1_MAX);
@@ -149,7 +159,8 @@ TEST pcode_u1_to_i2_convert_Main()
 }
 
 TEST pcode_u2_to_i2_convert_Main()
-{	extern i2 pcode_u2_to_i2_convert(u2 a);
+{
+	extern i2 pcode_u2_to_i2_convert(u2 a);
 	ASSERTI2(pcode_u2_to_i2_convert(U2_MAGIC), U2_MAGIC);
 	ASSERTI2(pcode_u2_to_i2_convert(0), 0);
 	ASSERTI2(pcode_u2_to_i2_convert(U1_55), U1_55);
@@ -162,7 +173,8 @@ TEST pcode_u2_to_i2_convert_Main()
 }
 
 TEST pcode_u4_to_i2_convert_Main()
-{	extern i2 pcode_u4_to_i2_convert(u4 a);
+{
+	extern i2 pcode_u4_to_i2_convert(u4 a);
 	ASSERTI2(pcode_u4_to_i2_convert(U4_MAGIC), U2_MAGIC);
 	ASSERTI2(pcode_u4_to_i2_convert(0), 0);
 	ASSERTI2(pcode_u4_to_i2_convert(U1_55), U1_55);
@@ -180,7 +192,8 @@ TEST pcode_u4_to_i2_convert_Main()
 }
 
 TEST pcode_i1_to_i4_convert_Main()
-{	extern i4 pcode_i1_to_i4_convert(i1 a);
+{
+	extern i4 pcode_i1_to_i4_convert(i1 a);
 	ASSERTI4(pcode_i1_to_i4_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI4(pcode_i1_to_i4_convert(0), 0);
 	ASSERTI4(pcode_i1_to_i4_convert(-1), -1);
@@ -191,7 +204,8 @@ TEST pcode_i1_to_i4_convert_Main()
 }
 
 TEST pcode_i2_to_i4_convert_Main()
-{	extern i4 pcode_i2_to_i4_convert(i2 a);
+{
+	extern i4 pcode_i2_to_i4_convert(i2 a);
 	ASSERTI4(pcode_i2_to_i4_convert(U2_MAGIC), U2_MAGIC);
 	ASSERTI4(pcode_i2_to_i4_convert(0), 0);
 	ASSERTI4(pcode_i2_to_i4_convert(-1), -1);
@@ -206,7 +220,8 @@ TEST pcode_i2_to_i4_convert_Main()
 }
 
 TEST pcode_i4_to_i4_convert_Main()
-{	extern i4 pcode_i4_to_i4_convert(i4 a);
+{
+	extern i4 pcode_i4_to_i4_convert(i4 a);
 	ASSERTI4(pcode_i4_to_i4_convert(U4_MAGIC), U4_MAGIC);
 	ASSERTI4(pcode_i4_to_i4_convert(0), 0);
 	ASSERTI4(pcode_i4_to_i4_convert(-1), -1);
@@ -225,7 +240,8 @@ TEST pcode_i4_to_i4_convert_Main()
 }
 
 TEST pcode_u1_to_i4_convert_Main()
-{	extern i4 pcode_u1_to_i4_convert(u1 a);
+{
+	extern i4 pcode_u1_to_i4_convert(u1 a);
 	ASSERTI4(pcode_u1_to_i4_convert(U1_MAGIC), U1_MAGIC);
 	ASSERTI4(pcode_u1_to_i4_convert(0), 0);
 	ASSERTI4(pcode_u1_to_i4_convert(U1_MAX), U1_MAX);
@@ -236,7 +252,8 @@ TEST pcode_u1_to_i4_convert_Main()
 }
 
 TEST pcode_u2_to_i4_convert_Main()
-{	extern i4 pcode_u2_to_i4_convert(u2 a);
+{
+	extern i4 pcode_u2_to_i4_convert(u2 a);
 	ASSERTI4(pcode_u2_to_i4_convert(U2_MAGIC), U2_MAGIC);
 	ASSERTI4(pcode_u2_to_i4_convert(0), 0);
 	ASSERTI4(pcode_u2_to_i4_convert(U1_55), U1_55);
@@ -249,7 +266,8 @@ TEST pcode_u2_to_i4_convert_Main()
 }
 
 TEST pcode_u4_to_i4_convert_Main()
-{	extern i4 pcode_u4_to_i4_convert(u4 a);
+{
+	extern i4 pcode_u4_to_i4_convert(u4 a);
 	ASSERTI4(pcode_u4_to_i4_convert(U4_MAGIC), U4_MAGIC);
 	ASSERTI4(pcode_u4_to_i4_convert(0), 0);
 	ASSERTI4(pcode_u4_to_i4_convert(U1_55), U1_55);
@@ -264,7 +282,8 @@ TEST pcode_u4_to_i4_convert_Main()
 }
 
 TEST pcode_i1_to_u1_convert_Main()
-{	extern u1 pcode_i1_to_u1_convert(i1 a);
+{
+	extern u1 pcode_i1_to_u1_convert(i1 a);
 	ASSERTU1(pcode_i1_to_u1_convert(0), U1_MIN);
 	ASSERTU1(pcode_i1_to_u1_convert(-1), U1_MAX);
 	ASSERTU1(pcode_i1_to_u1_convert(U1_55), U1_55);
@@ -275,7 +294,8 @@ TEST pcode_i1_to_u1_convert_Main()
 }
 
 TEST pcode_i2_to_u1_convert_Main()
-{	extern u1 pcode_i2_to_u1_convert(i2 a);
+{
+	extern u1 pcode_i2_to_u1_convert(i2 a);
 	ASSERTU1(pcode_i2_to_u1_convert(0), 0);
 	ASSERTU1(pcode_i2_to_u1_convert(-1), U1_MAX);
 	ASSERTU1(pcode_i2_to_u1_convert(U1_55), U1_55);
@@ -290,7 +310,8 @@ TEST pcode_i2_to_u1_convert_Main()
 }
 
 TEST pcode_i4_to_u1_convert_Main()
-{	extern u1 pcode_i4_to_u1_convert(i4 a);
+{
+	extern u1 pcode_i4_to_u1_convert(i4 a);
 	ASSERTU1(pcode_i4_to_u1_convert(0), 0);
 	ASSERTU1(pcode_i4_to_u1_convert(-1), U1_MAX);
 	ASSERTU1(pcode_i4_to_u1_convert(U1_55), U1_55);
@@ -309,7 +330,8 @@ TEST pcode_i4_to_u1_convert_Main()
 }
 
 TEST pcode_u1_to_u1_convert_Main()
-{	extern u1 pcode_u1_to_u1_convert(u1 a);
+{
+	extern u1 pcode_u1_to_u1_convert(u1 a);
 	ASSERTU1(pcode_u1_to_u1_convert(0), 0);
 	ASSERTU1(pcode_u1_to_u1_convert(U1_55), U1_55);
 	ASSERTU1(pcode_u1_to_u1_convert(U1_AA), U1_AA);
@@ -320,7 +342,8 @@ TEST pcode_u1_to_u1_convert_Main()
 }
 
 TEST pcode_u2_to_u1_convert_Main()
-{	extern u1 pcode_u2_to_u1_convert(u2 a);
+{
+	extern u1 pcode_u2_to_u1_convert(u2 a);
 	ASSERTU1(pcode_u2_to_u1_convert(0), 0);
 	ASSERTU1(pcode_u2_to_u1_convert(U1_55), U1_55);
 	ASSERTU1(pcode_u2_to_u1_convert(U1_AA), U1_AA);
@@ -333,7 +356,8 @@ TEST pcode_u2_to_u1_convert_Main()
 }
 
 TEST pcode_u4_to_u1_convert_Main()
-{	extern u1 pcode_u4_to_u1_convert(u4 a);
+{
+	extern u1 pcode_u4_to_u1_convert(u4 a);
 	ASSERTU1(pcode_u4_to_u1_convert(0), 0);
 	ASSERTU1(pcode_u4_to_u1_convert(U1_55), U1_55);
 	ASSERTU1(pcode_u4_to_u1_convert(U1_AA), U1_AA);
@@ -348,7 +372,8 @@ TEST pcode_u4_to_u1_convert_Main()
 }
 
 TEST pcode_i1_to_u2_convert_Main()
-{	extern u2 pcode_i1_to_u2_convert(i1 a);
+{
+	extern u2 pcode_i1_to_u2_convert(i1 a);
 	ASSERTU2(pcode_i1_to_u2_convert(0), U2_MIN);
 	ASSERTU2(pcode_i1_to_u2_convert(-1), U2_MAX);
 	ASSERTU2(pcode_i1_to_u2_convert(U1_55), U1_55);
@@ -359,7 +384,8 @@ TEST pcode_i1_to_u2_convert_Main()
 }
 
 TEST pcode_i2_to_u2_convert_Main()
-{	extern u2 pcode_i2_to_u2_convert(i2 a);
+{
+	extern u2 pcode_i2_to_u2_convert(i2 a);
 	ASSERTU2(pcode_i2_to_u2_convert(0), 0);
 	ASSERTU2(pcode_i2_to_u2_convert(-1), U2_MAX);
 	ASSERTU2(pcode_i2_to_u2_convert(U1_55), U1_55);
@@ -374,7 +400,8 @@ TEST pcode_i2_to_u2_convert_Main()
 }
 
 TEST pcode_i4_to_u2_convert_Main()
-{	extern u2 pcode_i4_to_u2_convert(i4 a);
+{
+	extern u2 pcode_i4_to_u2_convert(i4 a);
 	ASSERTU2(pcode_i4_to_u2_convert(0), 0);
 	ASSERTU2(pcode_i4_to_u2_convert(-1), U2_MAX);
 	ASSERTU2(pcode_i4_to_u2_convert(U1_55), U1_55);
@@ -393,7 +420,8 @@ TEST pcode_i4_to_u2_convert_Main()
 }
 
 TEST pcode_u1_to_u2_convert_Main()
-{	extern u2 pcode_u1_to_u2_convert(u1 a);
+{
+	extern u2 pcode_u1_to_u2_convert(u1 a);
 	ASSERTU2(pcode_u1_to_u2_convert(0), 0);
 	ASSERTU2(pcode_u1_to_u2_convert(U1_55), U1_55);
 	ASSERTU2(pcode_u1_to_u2_convert(U1_AA), U1_AA);
@@ -404,7 +432,8 @@ TEST pcode_u1_to_u2_convert_Main()
 }
 
 TEST pcode_u2_to_u2_convert_Main()
-{	extern u2 pcode_u2_to_u2_convert(u2 a);
+{
+	extern u2 pcode_u2_to_u2_convert(u2 a);
 	ASSERTU2(pcode_u2_to_u2_convert(0), 0);
 	ASSERTU2(pcode_u2_to_u2_convert(U1_55), U1_55);
 	ASSERTU2(pcode_u2_to_u2_convert(U1_AA), U1_AA);
@@ -417,7 +446,8 @@ TEST pcode_u2_to_u2_convert_Main()
 }
 
 TEST pcode_u4_to_u2_convert_Main()
-{	extern u2 pcode_u4_to_u2_convert(u4 a);
+{
+	extern u2 pcode_u4_to_u2_convert(u4 a);
 	ASSERTU2(pcode_u4_to_u2_convert(0), 0);
 	ASSERTU2(pcode_u4_to_u2_convert(U1_55), U1_55);
 	ASSERTU2(pcode_u4_to_u2_convert(U1_AA), U1_AA);
@@ -432,7 +462,8 @@ TEST pcode_u4_to_u2_convert_Main()
 }
 
 TEST pcode_i1_to_u4_convert_Main()
-{	extern u4 pcode_i1_to_u4_convert(i1 a);
+{
+	extern u4 pcode_i1_to_u4_convert(i1 a);
 	ASSERTU4(pcode_i1_to_u4_convert(0), U4_MIN);
 	ASSERTU4(pcode_i1_to_u4_convert(-1), U4_MAX);
 	ASSERTU4(pcode_i1_to_u4_convert(U1_55), U1_55);
@@ -443,7 +474,8 @@ TEST pcode_i1_to_u4_convert_Main()
 }
 
 TEST pcode_i2_to_u4_convert_Main()
-{	extern u4 pcode_i2_to_u4_convert(i2 a);
+{
+	extern u4 pcode_i2_to_u4_convert(i2 a);
 	ASSERTU4(pcode_i2_to_u4_convert(0), 0);
 	ASSERTU4(pcode_i2_to_u4_convert(-1), U4_MAX);
 	ASSERTU4(pcode_i2_to_u4_convert(U1_55), U1_55);
@@ -458,7 +490,8 @@ TEST pcode_i2_to_u4_convert_Main()
 }
 
 TEST pcode_i4_to_u4_convert_Main()
-{	extern u4 pcode_i4_to_u4_convert(i4 a);
+{
+	extern u4 pcode_i4_to_u4_convert(i4 a);
 	ASSERTU4(pcode_i4_to_u4_convert(0), 0);
 	ASSERTU4(pcode_i4_to_u4_convert(-1), U4_MAX);
 	ASSERTU4(pcode_i4_to_u4_convert(U1_55), U1_55);
@@ -477,7 +510,8 @@ TEST pcode_i4_to_u4_convert_Main()
 }
 
 TEST pcode_u1_to_u4_convert_Main()
-{	extern u4 pcode_u1_to_u4_convert(u1 a);
+{
+	extern u4 pcode_u1_to_u4_convert(u1 a);
 	ASSERTU4(pcode_u1_to_u4_convert(0), 0);
 	ASSERTU4(pcode_u1_to_u4_convert(U1_55), U1_55);
 	ASSERTU4(pcode_u1_to_u4_convert(U1_AA), U1_AA);
@@ -488,7 +522,8 @@ TEST pcode_u1_to_u4_convert_Main()
 }
 
 TEST pcode_u2_to_u4_convert_Main()
-{	extern u4 pcode_u2_to_u4_convert(u2 a);
+{
+	extern u4 pcode_u2_to_u4_convert(u2 a);
 	ASSERTU4(pcode_u2_to_u4_convert(0), 0);
 	ASSERTU4(pcode_u2_to_u4_convert(U1_55), U1_55);
 	ASSERTU4(pcode_u2_to_u4_convert(U1_AA), U1_AA);
@@ -501,7 +536,8 @@ TEST pcode_u2_to_u4_convert_Main()
 }
 
 TEST pcode_u4_to_u4_convert_Main()
-{	extern u4 pcode_u4_to_u4_convert(u4 a);
+{
+	extern u4 pcode_u4_to_u4_convert(u4 a);
 	ASSERTU4(pcode_u4_to_u4_convert(0), 0);
 	ASSERTU4(pcode_u4_to_u4_convert(U1_55), U1_55);
 	ASSERTU4(pcode_u4_to_u4_convert(U1_AA), U1_AA);
