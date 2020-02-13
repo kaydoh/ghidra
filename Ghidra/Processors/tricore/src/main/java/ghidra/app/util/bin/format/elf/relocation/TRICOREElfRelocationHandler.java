@@ -29,7 +29,6 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 
 	@Override
 	public boolean canRelocate(ElfHeader elf) {
-		System.out.println("TRICORE elf relocation canRelocate()" + (elf.e_machine() == ElfConstants.EM_TRICORE));
 		return elf.e_machine() == ElfConstants.EM_TRICORE;
 	}
 
@@ -39,7 +38,6 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 
 		ElfHeader elf = elfRelocationContext.getElfHeader();
 		if (!canRelocate(elf)) {
-			System.out.println("TRICORE elf relocation relocate() dummy");
 			return;
 		}
 
@@ -49,7 +47,6 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 		int type = relocation.getType();
 
 		if (TRICOREElfRelocationConstants.R_TRICORE_NONE == type) {
-			System.out.println("TRICORE elf relocation relocate() NONE");
 			return;
 		}
 
@@ -204,14 +201,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 *   bit 0 of the RV must be zero.
 	 */
 	private void relocate_relB(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if (rv < -16777216 || rv > 16777214 || (rv & 1) != 0)
+		if (rv < -16777216 || rv > 16777214 || (rv & 1) != 0) {
 			throw new MemoryAccessException();
-
-		// 6d 00 1e 08
-		// 0   8   1   e    0   0    6   d
-		// 0000100000011110 00000000 01101101
-		// 1098765432109876 54321098 76543210
-		// 0000000000001000000111100
+		}
 
 		int iw = memory.getInt(relocationAddress) & 0xff;
 		iw |= ((rv & 0x1fffe) << 15);
@@ -227,8 +219,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 28-31 of the RV go into bits 12-15 of the IW.
 	 */
 	private void relocate_absB(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xfe00001 & rv) != 0)
+		if ((0xfe00001 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0xff;
 		iw |= ((rv & 0x1fffe) << 15);
 		iw |= ((rv & 0x1e0000) >> 9);
@@ -243,8 +236,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 10-31 of the RV must be zero.
 	 */
 	private void relocate_BO(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xfffffc00 & rv) != 0)
+		if ((0xfffffc00 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0xfc0ffff;
 		iw |= ((rv & 0x3f) << 16);
 		iw |= ((rv & 0x3c0) << 22);
@@ -259,8 +253,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 16-31 of the RV must be zero.
 	 */
 	private void relocate_BOL(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xffff0000 & rv) != 0)
+		if ((0xffff0000 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0xffff;
 		iw |= ((rv & 0x3f) << 16);
 		iw |= ((rv & 0x3c0) << 22);
@@ -274,8 +269,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 16-31 of the RV must be zero.
 	 */
 	private void relocate_BR(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xffff0000 & rv) != 0)
+		if ((0xffff0000 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0x8000ffff;
 		iw |= ((rv & 0xfffe) << 15);
 		memory.setInt(relocationAddress, iw);
@@ -287,8 +283,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 16-31 of the RV must be zero.
 	 */
 	private void relocate_RLC(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xffff0000 & rv) != 0)
+		if ((0xffff0000 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0xf0000fff;
 		iw |= ((rv & 0xffff) << 12);
 		memory.setInt(relocationAddress, iw);
@@ -303,8 +300,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 28-31 of the RV go into bits 12-15 of the IW.
 	 */
 	private void relocate_ABS(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xfffc000 & rv) != 0)
+		if ((0xfffc000 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getInt(relocationAddress) & 0xc000fff;
 		iw |= ((rv & 0x3f) << 16);
 		iw |= ((rv & 0x3c0) << 22);
@@ -330,8 +328,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 0-7 and 16-31 of the RV must be zero.
 	 */
 	private void relocate_pcpPage(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xffff00ff & rv) != 0)
+		if ((0xffff00ff & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getShort(relocationAddress) & 0xff;
 		iw |= (rv & 0xff00);
 		memory.setShort(relocationAddress, (short)iw);
@@ -343,8 +342,9 @@ public class TRICOREElfRelocationHandler extends ElfRelocationHandler {
 	 * - bits 6-15 of the RV must be zero.
 	 */
 	private void relocate_PI(Memory memory, Address relocationAddress, int rv) throws MemoryAccessException {
-		if ((0xffffffc0 & rv) != 0)
+		if ((0xffffffc0 & rv) != 0) {
 			throw new MemoryAccessException();
+		}
 		int iw = memory.getShort(relocationAddress) & 0xffc0;
 		iw |= (rv & 0x3f);
 		memory.setShort(relocationAddress, (short)iw);
