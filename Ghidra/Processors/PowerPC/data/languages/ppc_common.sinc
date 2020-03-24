@@ -1583,7 +1583,7 @@ macro divOverflow(a,b) {
 	xer_ov = (b==0) || ((b==-1) && (a==0x80000000));
   	xer_so = xer_so || xer_ov;
 }
-macro divZero(a,b) {
+macro divZero(b) {
 	xer_ov = (b==0);
   	xer_so = xer_so || xer_ov;
 }
